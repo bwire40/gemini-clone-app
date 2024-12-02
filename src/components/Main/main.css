@@ -1,0 +1,24 @@
+.greet span {
+  /* background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-red-500;
+}
+
+.card {
+  @apply h-72 p-5 bg-gray-100 rounded-lg relative cursor-pointer hover:bg-gray-300 transition-all duration-300;
+}
+
+.card img {
+  @apply w-9 p-1 absolute bg-white rounded-full bottom-2 right-2;
+}
+.card p {
+  @apply text-gray-500 text-lg;
+}
+
+.search-box img {
+  @apply w-5 cursor-pointer;
+}
+.search-box input {
+  @apply flex flex-1 border-none outline-none bg-transparent p-2.5 text-lg;
+}
