@@ -1,9 +1,11 @@
 import { createContext, useState } from "react";
 import runChat from "../config/gemini";
 
+// create context
 export const Context = createContext();
 
-const ContextProvider = (props) => {
+// create provider
+const ContextProvider = ({ children }) => {
   // state variables
   const [input, setInput] = useState("");
   const [recentPrompt, setRecentPrompt] = useState("");
@@ -42,9 +44,7 @@ const ContextProvider = (props) => {
     setInput,
   };
 
-  return (
-    <Context.Provider value={contextValue}>{props.children}</Context.Provider>
-  );
+  return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 };
 
 export default ContextProvider;
