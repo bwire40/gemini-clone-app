@@ -18,7 +18,7 @@ const Main = () => {
 
   console.log(recentPrompt);
   return (
-    <div className="flex flex-1 flex-col relative min-h-screen w-full">
+    <div className="flex flex-1  flex-col relative min-h-screen w-full">
       {/* nav */}
       <div className="flex items-start justify-between text-xl p-[20px] text-gray-400 w-full">
         <p>Gemini</p>
@@ -69,7 +69,7 @@ const Main = () => {
             </div>
           </div>
         ) : (
-          <div className="result  py-0 px-1 max-h-[70vh] overflow-y-auto">
+          <div className="result py-0 px-1 max-h-[70vh] overflow-y-auto">
             <div className="result-title my-4 mx-0 flex items-center gap-5">
               <img src={assets.user_icon} alt="user" className="" />
               <p>{recentPrompt}</p>
