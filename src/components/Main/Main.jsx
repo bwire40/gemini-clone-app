@@ -90,8 +90,8 @@ const Main = () => {
           </div>
         )}
 
-        <div className="w-full mx-auto flex gap-6 flex-col">
-          <div className="search-box w-full flex items-center justify-between px-5 bg-gray-100 rounded-3xl">
+        <div className="main-bottom w-full mx-auto flex gap-6 flex-col px-4">
+          <div className="search-box w-full my-2 flex items-center justify-between px-5 bg-gray-100 rounded-3xl">
             <input
               type="text"
               placeholder="Ask Gemini"
@@ -102,7 +102,15 @@ const Main = () => {
             <div className="flex gap-2 items-center">
               <img src={assets.gallery_icon} alt="gallary" />
               <img src={assets.mic_icon} alt="mic" />
-              <img src={assets.send_icon} alt="send" onClick={() => onSent()} />
+              {input ? (
+                <img
+                  src={assets.send_icon}
+                  alt="send"
+                  onClick={() => onSent()}
+                />
+              ) : (
+                ""
+              )}
             </div>
           </div>
 

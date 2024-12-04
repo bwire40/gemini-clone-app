@@ -19,6 +19,11 @@ const ContextProvider = ({ children }) => {
       setResultData((prev) => prev + nextWord);
     }, 75 * index);
   };
+
+  const newChat = () => {
+    setLoading(false);
+    setShowResult(false);
+  };
   // when we send out request prompt
   const onSent = async (prompt) => {
     // reset result data
@@ -79,6 +84,7 @@ const ContextProvider = ({ children }) => {
     resultData,
     input,
     setInput,
+    newChat,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

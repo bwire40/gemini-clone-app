@@ -7,7 +7,8 @@ const Sidebar = () => {
   // state to mange out sidebar
   const [extended, setExtended] = useState(false);
 
-  const { onSent, previousPrompt, setRecentPrompt } = useContext(Context);
+  const { onSent, previousPrompt, setRecentPrompt, newChat } =
+    useContext(Context);
 
   const loadPrompt = async (prompt) => {
     setRecentPrompt(prompt);
@@ -20,10 +21,10 @@ const Sidebar = () => {
         <img
           src={assets.menu_icon}
           alt="menu"
-          className="menu"
+          className="menu flex ml-[10px] cursor-pointer"
           onClick={() => setExtended((prev) => !prev)}
         />
-        <div className="new-chat">
+        <div onClick={() => newChat()} className="new-chat">
           <img src={assets.plus_icon} alt="plus_icon" />
           {extended ? <p>New Chat</p> : null}
         </div>

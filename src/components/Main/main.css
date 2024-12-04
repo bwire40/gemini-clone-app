@@ -52,3 +52,25 @@
 .result-data p{
   @apply text-sm font-normal
 }
+
+
+@media (max-width: 600px) {
+  .main-bottom{
+    @apply px-3
+  }
+  .main-bottom input {
+    flex: none;
+    width: 150px;
+  }
+  .main-bottom img {
+    /* flex: none; */
+    width: 20px;
+  }
+  .search-box{
+    /* border: 1px solid red; */
+    @apply mb-4 px-2 py-1
+  }
+  .search-box div{
+    @apply gap-1.5
+  }
+}
